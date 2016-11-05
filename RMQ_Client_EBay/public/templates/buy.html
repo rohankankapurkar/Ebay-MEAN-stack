@@ -1,0 +1,35 @@
+<div ng-controller="buyController">
+	<div class  = "row">
+	     <div class = col-md-3"">
+	     
+	     <h1><%= allproducts %></h1>
+		<table class="table table-inverse”>
+			<tr>
+				<th>NameE</th>
+				<th>Price</th>
+				<th>Description</th>
+				<th>click</th>
+			</tr>
+			
+			
+			<tr ng-repeat="product in allproducts">
+				<td>{{product.p_name}}</td>
+				<td>{{product.p_price}}</td>
+				<td>{{product.p_disc}}</td>
+				<td><button name="ADD TO CART" ng-submit="product_to_cart(product.p_id)" type="submit"
+											class="btn btn-primary">ADD TO CART</button></td>
+			</tr>
+		</table>
+         </div>
+	</div>
+</div>
+
+
+     
+ 
+     
+     
+     
+     
+     
+ </body>

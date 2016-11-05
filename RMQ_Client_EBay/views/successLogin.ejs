@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Successful Login</title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js">
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js">	
+</script>
+
+    
+    
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+<!-- Loading the AngularJS file from /public/angularJS folder -->
+<script src="angular/products.js"></script>
+
+     
+ </head>
+ <body ng-app="myApp">
+      <nav class="navbar ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">
+        
+          <img src="templates/ebay2.png" style="display: inline-block;">
+  <span style="display: inline-block;"></span>
+        
+        </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#/info">User profile</a></li>
+        <li><a href="#/history">History of purchase</a></li> 
+        <li><a href="#/bidding">Status of bidding</a></li> 
+          <li><a href="#/cart">Cart</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/signout"><span class="glyphicon glyphicon-log-in"></span> Logout </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+     
+     
+     
+    <div class="row">
+        
+        <div class = "col-md-3">
+            
+            <div class="sidebar navbar">
+                <div class="well">
+                    <ul class="nav ">
+                        <li class="nav-header">
+                        
+                        
+                        <div class="col-md-12">     
+                    
+                    <p><strong>Hi </strong><%=
+                    data.firstname%></p>
+                    <p><strong>ID: </strong><%=
+                    data.username%></p>
+                             <p><strong>Last Login </strong><%=
+                    data.time%></p>
+                    <br>
+               
+                </div>
+                        
+                        Welcome to Ebay</li>
+                        <li></li>
+                        <li><a href="#/sell">Sell items</a>
+                        </li>
+                        <li><a href="#/buy">Bid products</a>
+                        </li>
+                        
+                        <li><a href="#/buy2">Buy items without bid</a>
+                        </li>
+                        <li><a href="#/yourads">Your posted ads</a>
+                        </li>
+                        
+                   
+                    </ul>
+                </div>
+                <!--/.well -->
+            </div>
+
+     
+        </div>
+        <div class = "col-md-9">
+            <div class = "row">
+              
+                <div ng-view> </div>
+
+                
+                
+            </div>
+          
+             
+					
+
+        
+        
+        </div>
+    
+    </div>
+</div>    
+ </body>
+</html>

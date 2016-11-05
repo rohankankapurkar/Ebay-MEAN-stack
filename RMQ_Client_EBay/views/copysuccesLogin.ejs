@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Successful Login</title>
+ <link rel='stylesheet' href='/stylesheets/style.css' />
+     <link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<!-- Loading the AngularJS file from /public/angularJS folder -->
+<script src="angular/login.js"></script>
+     <script src="angular/products.js"></script>
+
+     
+ </head>
+ <body ng-app="products" ng-controller="products">
+      <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Information about the user</a></li>
+        <li><a href="#">Random shit</a></li> 
+        <li><a href="#">Cart</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="/signout"><span class="glyphicon glyphicon-log-in"></span> Logout </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+     
+     
+     
+ <h1>Available products here</h1>
+ 	<div class="row">
+                
+        <div class="col-md-4">     
+ <% for(var i in data)
+ {
+ %>
+ <p><strong>Welcome </strong><%=
+data[i].username%></p>
+ <p><strong>ID: </strong><%=
+data[i].user_id%></p>
+
+ <br>
+ <%
+ }
+ %>
+        </div>
+</div>
+     
+     <div>
+         
+        <button type="button" class="btn btn-info" ng-click= "sell()">Click here to post an ad</button>
+        </br></br></br>
+        <button type="button" class="btn btn-info" ng-click= "buy()" type="submit">Click here to view ads </button>
+
+         
+         
+     </div>
+
+     
+ 
+     
+     
+     
+     
+     
+ </body>
+</html>

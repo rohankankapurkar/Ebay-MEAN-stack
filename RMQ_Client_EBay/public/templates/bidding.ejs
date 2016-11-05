@@ -1,0 +1,40 @@
+
+
+
+<div class="jumbotron">
+    <h3>Biddings for your active Ads</h3>
+    
+  </div>
+
+
+<div class="div-align" ng-controller="biddingController">
+	<div>
+		<table class="table table-bordered table-hover table-active">
+			<tr>
+				<th>Product Id</th>
+				<th>Name</th>
+				<th>My Price</th>
+				<th>Product description</th>
+                <th>Bidder</th>
+                <th>Bid placed</th>
+              
+			
+                
+			</tr>
+			<tr ng-repeat="product in allproducts">
+				<td>{{product._id}}</td>
+				<td>{{product.p_name}}</td>
+				<td>{{product.p_price}}</td>
+				<td>{{product.p_disc}}</td>
+                <td>{{product.username}}</td>
+                <td>{{product.bidding}}</td>
+              
+                
+				
+            
+                
+			</tr>
+		</table>
+
+	</div>
+</div>

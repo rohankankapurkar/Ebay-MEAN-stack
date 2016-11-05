@@ -1,0 +1,43 @@
+
+
+
+<div class="jumbotron">
+    <h3>Buy items </h3>
+    <p>select the items from below list </p>
+  </div>
+
+
+
+<div class="item col-lg-12 div-align" ng-controller="buyController">
+	<div>
+        
+		<table class="table table-bordered table-hover table-active">
+			<tr>
+				<th>PRODUCT ID</th>
+				<th>PRODUCT NAME</th>
+				<th>PRODUCT PRICE</th>
+				<th>PRODUCT DESCRIPTION</th>
+                <th>OWNER</th>
+                <th>BID YOUR PRICE</th>
+                <th>SUBMIT BIDDING</th>
+              
+			</tr>
+			<tr ng-repeat="product in allproducts">
+				<td>{{product._id}}</td>
+				<td>{{product.p_name}}</td>
+				<td>{{product.p_price}}</td>
+				<td>{{product.p_disc}}</td>
+                <td>{{product.username}}</td>
+                
+
+                
+                <td> <input type="text" value = product.bid name="bid" ng-model= "product.bidding"></td>
+                <td><button name="BID" ng-click="addToBid(product,product.bidding)" type="submit"
+											class="btn btn-primary">BID</button></td>
+                
+                
+			</tr>
+		</table>
+
+	</div>
+</div>

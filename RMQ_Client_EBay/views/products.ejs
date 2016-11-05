@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Successful Login</title>
+ <link rel='stylesheet' href='/stylesheets/style.css' />
+     <link rel='stylesheet' href='/stylesheets/style.css' />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<!-- Loading the AngularJS file from /public/angularJS folder -->
+<script src="angularjs/login.js"></script>
+ </head>
+ <body ng-app="products" ng-controller="products">
+      <div class="jumbotron">
+    <h1>Bootstrap And AngularJS</h1>
+    <p>Welcome to the John Doe Products</p>
+    </div>
+ <h1>Current available products are .</h1>
+ 	<div class="row">
+                
+        <div class="col-md-4">     
+ <% for(var i in data )
+ {
+     %> </br>
+     <button class="btn btn-primary" ng-click = "add_to_cart(data[i].p_id)"> 
+          </br>   
+         <%=
+data[i].p_name%></p>
+ <p><strong>Price baby: </strong><%=
+data[i].p_price%></p>
+        Bid Your value <input type="number" ng-model = "bid">
+
+ <%
+ }
+ %>
+        </div>
+</div>
+
+     
+ 
+     
+     
+     
+     
+     
+ </body>
+</html>

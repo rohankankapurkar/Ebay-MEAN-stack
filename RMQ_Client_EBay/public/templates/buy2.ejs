@@ -1,0 +1,41 @@
+
+
+
+<div class="jumbotron">
+    <h3>Buy items </h3>
+    <p>select the items from below list </p>
+  </div>
+
+
+
+<div class="item col-lg-12 div-align" ng-controller="buy2Controller">
+	<div>
+        
+		<table class="table table-bordered table-hover table-active">
+			<tr>
+				<th>PRODUCT ID</th>
+				<th>PRODUCT NAME</th>
+				<th>PRODUCT PRICE</th>
+				<th>PRODUCT DESCRIPTION</th>
+                <th>OWNER</th>
+				<th>ADD TO CART</th>
+              
+			</tr>
+			<tr ng-repeat="product in allproducts">
+				<td>{{product._id}}</td>
+				<td>{{product.p_name}}</td>
+				<td>{{product.p_price}}</td>
+				<td>{{product.p_disc}}</td>
+                <td>{{product.username}}</td>
+                
+				<td><button name="ADD TO CART" ng-click="addToCart(product)" type="submit"
+											class="btn btn-info">ADD TO CART</button></td>
+                
+
+                
+                
+			</tr>
+		</table>
+
+	</div>
+</div>

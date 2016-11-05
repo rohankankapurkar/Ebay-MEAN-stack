@@ -1,0 +1,18 @@
+
+<div class="jumbotron">
+    <h3>Sell items </h3>
+    <p>Enter information about the product you want to sell </p>
+  </div>
+
+
+<div class="form-group" ng-controller = "sellController1">
+    Enter the product name  <input type="text" class="form-control" id="p_name" placeholder=" name" name= "p_name" ng-model = "p_name"> </br>
+    Enter the product price  <input type="text" class="form-control" id="p_price" placeholder="At what price you are planning to sell this product" name= "p_price" ng-model = "p_price"> </br>
+    
+   				Enter the description of product<input type="text" class="form-control" id="p_disc" placeholder="How is the condition ??" name= "p_disc" ng-model = "p_disc"> </br>
+ 	       	  Enter the contact info  <input type="text" class="form-control" id="p_name" placeholder=" contact information" name= "p_info" ng-model = "p_info"> </br>
+        	  Enter the quantity  <input type="text" class="form-control" id="p_name" placeholder=" quantity" name= "p_number" ng-model = "p_number"> </br>
+         	 Want to bid  <input type="text" class="form-control" id="p_bid" placeholder=" put yes or no" name= p_bid ng-model = "p_bid"> </br>
+  <button type="submit" class="btn btn-default" ng-click= addproduct()>submit ad</button>
+  </div>
+  

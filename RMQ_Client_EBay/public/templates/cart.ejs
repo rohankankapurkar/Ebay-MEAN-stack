@@ -1,0 +1,83 @@
+<div class="jumbotron">
+    <h3>Shopping cart </h3>
+    <p>purchase or remove items from your cart </p>
+  </div>
+
+
+
+
+<div class="div-align" ng-controller="cartController">
+	<div>
+		<table class="table table-bordered table-hover table-active">
+			<tr>
+				<th>PRODUCT ID</th>
+				<th>PRODUCT NAME</th>
+				<th>PRODUCT PRICE</th>
+				<th>PRODUCT DESCRIPTION</th>
+                <th>OWNER</th>
+				
+                <th>Delete from cart</th>
+                
+			</tr>
+			<tr ng-repeat="product in allproducts">
+				<td>{{product.p_id}}</td>
+				<td>{{product.p_name}}</td>
+				<td>{{product.p_price}}</td>
+				<td>{{product.p_disc}}</td>
+                <td>{{product.seller}}</td>
+                
+  
+		       
+                
+                <td><button name="Delete" ng-click="deleteFromCart(product)" type="submit"
+											class="btn btn-primary">Remove</button></td>
+            </tr>
+		</table>
+        
+    
+
+	</div>
+    		<div class="table table-bordered table-hover table-active">
+
+    
+    <h3 >Please give your credit card details for payment </h3>
+    </br>
+    
+        
+        <div class="form-group row">
+  <label  class="col-xs-2 col-form-label">Credit card number</label>
+  <div class="col-xs-5">
+    <input ng-model = "card" name= "card" class="form-control" type="text" placeholder="0000-0000-0000-0000" id="example-text-input">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="example-search-input" class="col-xs-2 col-form-label">CVV</label>
+  <div class="col-xs-5">
+    <input ng-model= "cvv" name= "cvv" class="form-control" type="text" placeholder="XYZ" id="example-search-input">
+  </div>
+</div>
+        <div class="form-group row">
+  <label for="example-search-input" class="col-xs-2 col-form-label">Expiry date </label>
+  <div class="col-xs-5">
+    <input ng-model = "expiry" name= "expiry" class="form-control" type="date" placeholder="zx/as/qwer" id="example-search-input">
+  </div>
+</div>
+    <div class="form-group row">
+  <label  class="col-xs-2 col-form-label"></label>
+  <div class="col-xs-5">
+    <td><button name="Delete" ng-click="purchase()" type="submit"
+                    class="btn btn-primary btn-block">Purchase here</button></td>  
+  </div>
+</div>
+    </div>
+   
+    
+ 
+ 		
+              
+  
+        
+
+    
+    
+</div>
