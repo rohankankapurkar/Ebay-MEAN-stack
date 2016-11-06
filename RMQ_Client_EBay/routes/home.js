@@ -793,7 +793,7 @@ exports.addToBid  = function(req,res){
 
 
 //bidding part here
-setInterval(function(req,res){
+/*setInterval(function(req,res){
 	
 	console.log("printing date"+ new Date());
 	
@@ -912,7 +912,7 @@ setInterval(function(req,res){
  
 })
 
-}, 10000)
+}, 10000)*/
 
 
 
