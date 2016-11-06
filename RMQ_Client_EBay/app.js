@@ -9,6 +9,7 @@ var session = require('express-session');
 var bcrypt = require('bcrypt');
 var http = require('http');
 //var winston = require('winston');
+var passport = require("passport");
 
 const winston = require('winston')
 
@@ -89,8 +90,30 @@ app.use(session({
 
 app.use('/', routes);
 app.use('/users', users);
+//passport authentication added here
+app.post('/afterSignIn', function(req, res, next) {
+	console.log("hi");
+	console.log(req.body);
+	passport.authenticate('signin', function(err, user) {
+		if (err) {
+			console.log(err);
+		}
+		if (user) {
+			req.session.username = user.username;
+			console.log(req.session.username);
+			console.log('Before sending');
+			res.send({
+				'statusCode' : 200
+			});
+		} else {
+			res.send({
+				'statusCode' : 401
+			});
+		}
 
-
+		console.log("Session started in Passport");
+	})(req, res, next);
+});                        
 
 app.post('/checklogin',home.afterSignIn);
 //app.post('/buy',product.buy);
@@ -98,7 +121,7 @@ app.get('/signin', home.signin);
 
 
 app.get('/signout', home.logout);
-app.post('/afterSignIn',home.afterSignIn);
+//app.post('/afterSignIn',home.afterSignIn);
 app.get('/afterSignIn',home.login);
 //app.get('/buy',home.getAllUsers);
 app.get('/register', home.register);
